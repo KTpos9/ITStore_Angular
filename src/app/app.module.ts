@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material.module';
-import { MainComponent } from './shared/layouts/main/main.component'
+import { MainLayoutComponent } from './shared/layouts/mainLayout/mainLayout.component'
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './pages/shop/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    MainLayoutComponent,
     NavbarComponent,
     HomeComponent
   ],
