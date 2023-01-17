@@ -9,13 +9,15 @@ import { MaterialModule } from './material.module';
 import { MainLayoutComponent } from './shared/layouts/mainLayout/mainLayout.component'
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './pages/shop/home/home.component';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLayoutComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
