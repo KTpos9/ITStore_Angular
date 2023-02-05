@@ -10,6 +10,8 @@ import { MainLayoutComponent } from './shared/layouts/mainLayout/mainLayout.comp
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './pages/shop/home/home.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { CartPageComponent } from './pages/shop/cart-page/cart-page.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     MainLayoutComponent,
     NavbarComponent,
     HomeComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CartPageComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
