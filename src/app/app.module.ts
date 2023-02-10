@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/shop/home/home.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
 import { CartPageComponent } from './pages/shop/cart-page/cart-page.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
