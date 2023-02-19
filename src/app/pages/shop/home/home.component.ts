@@ -1,4 +1,4 @@
-import { Component , OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from 'src/app/models/Product.model';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -7,13 +7,13 @@ import { ProductsService } from 'src/app/services/products.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   products: Product[] = [];
 
   constructor(private _db: ProductsService){
 
   }
-  ngOnInit(): void {
+  ngOnInit() {
     this._db.getProducts()
     .subscribe({
       next: (products) => {
@@ -25,5 +25,4 @@ export class HomeComponent implements OnInit {
       }
     });
   }
-
 }
