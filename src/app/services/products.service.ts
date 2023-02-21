@@ -8,9 +8,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-
+  //inject Httpclient for calling the api
   constructor(private http: HttpClient) { }
 
+  //call the api to get the product as an Observable[]
   getProducts(): Observable<Product[]>{
     return this.http.get<Product[]>(`${environment.baseApiUrl}/api/Product`);
   }
