@@ -1,6 +1,39 @@
-.navbar{
-  justify-content: space-between;
+// .navbar{
+//   justify-content: space-between;
+// }
+// span{
+//   padding-right: 1rem;
+// }
+.active_nav{
+  border-bottom:3px solid #3ddc84;
+  color:#202124;
 }
-span{
-  padding-right: 1rem;
+a{
+  text-decoration: none;
+  color: #5f6368;
+}
+.search-bar{
+  border: 2px solid #1769e0;
+  display: flex;
+  border-radius: 50px;
+  &__input{
+    flex-grow: 1;
+    padding: 0 1em;
+    border: 0;
+    background: transparent;
+  }
+  &__input:focus{
+    outline: 0;
+  }
+  &__submit{
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    border-radius: 50px;
+    background: #d7effe;
+  }
+}
+.nav_item:hover{
+  border-bottom:3px solid #5f6368;
+  color:#202124;
 }
