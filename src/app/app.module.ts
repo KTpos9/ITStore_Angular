@@ -13,6 +13,7 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
 import { CartPageComponent } from './pages/shop/cart-page/cart-page.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ProductCardComponent,
     CartPageComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavItemComponent
   ],
   imports: [
     BrowserModule,
