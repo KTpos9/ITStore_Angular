@@ -8,6 +8,12 @@
   border-bottom:3px solid #3ddc84;
   color:#202124;
 }
+.nav_item{
+  &:hover {
+    border-bottom:3px solid #3ddc84;
+    color:#202124
+  }
+}
 a{
   text-decoration: none;
   color: #5f6368;
@@ -32,8 +38,4 @@ a{
     border-radius: 50px;
     background: #d7effe;
   }
-}
-.nav_item:hover{
-  border-bottom:3px solid #5f6368;
-  color:#202124;
 }
