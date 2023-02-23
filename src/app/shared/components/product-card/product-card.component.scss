@@ -8,16 +8,18 @@
   background-color: #e1f2fe;
 }
 .card-img-top {
-  aspect-ratio: 1 / 1 ;
+  aspect-ratio: 1 / 1 ;//unnecessary
   border-radius: 2em;
-  // width: 75%;
-  // height: 75%;
+
+  //resize image
+  width: auto;
+  height: 200px;
 
   // height: 20vw;
   // object-fit: cover;
 }
 h5{
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .btn{
   position: absolute;
@@ -25,5 +27,5 @@ h5{
   left: 20px;
 }
 .card-body{
-  padding-bottom: 96px;
+  padding-bottom: 48px;
 }
