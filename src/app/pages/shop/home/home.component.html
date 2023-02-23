@@ -1,7 +1,7 @@
 <div class="grid_wrapper m-5">
   <div class="item img_grid">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
-      style="max-width:670px;max-height:492px;">
+      style="max-width:670px; max-height:492px;">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
@@ -50,7 +50,7 @@
   </div>
 </div>
 
-<div class="grid_layout mx-5 px-3">
+<div class="grid_layout">
     <app-product-card *ngFor="let product of products" img={{product.productImg}} title={{product.productName}}
       price={{product.productPrice}}></app-product-card>
 </div>
