@@ -1,37 +1,4 @@
-﻿.wrapper {
-  width: 1200px;
-  margin-top: 100px;
-  margin-right: auto;
-  margin-bottom: 70px;
-  margin-left: auto;
-}
-.grid_wrapper {
-  display: grid;
-  row-gap: 2rem;
-}
-.two_column_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 3rem;
-  row-gap: 2rem;
-}
-
-li{
-  list-style-type:none;
-}
-
-
-body {
-  background-color: #f5eee7;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-}
-
-.container {
-  height: 100vh;
-}
-
-.card {
+﻿.card {
   border: none;
 }
 
@@ -42,13 +9,6 @@ body {
   border-bottom: none;
 }
 
-.btn-light:focus {
-  color: #212529;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
-  box-shadow: 0 0 0 0.2rem rgba(216,217,219,.5);
-}
-
 .form-control {
   height: 50px;
   border: 2px solid #eee;
@@ -56,28 +16,26 @@ body {
   font-size: 14px;
 }
 
-  .form-control:focus {
-      color: #495057;
-      background-color: #fff;
-      border-color: #039be5;
-      outline: 0;
-      box-shadow: none;
-  }
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #039be5;
+    outline: 0;
+    box-shadow: none;
+}
 
 .input {
   position: relative;
-}
-
-  .input i {
-      position: absolute;
+  & i{
+    position: absolute;
       top: 16px;
       left: 11px;
       color: #989898;
   }
-
-  .input input {
-      text-indent: 25px;
+  & input{
+    text-indent: 25px;
   }
+}
 
 .card-text {
   font-size: 13px;
@@ -88,23 +46,40 @@ body {
   font-size: 12px;
 }
 
-.billing {
-  font-size: 11px;
-}
-
-.line {
-  color: #bfbdbd;
-}
-
-.free-button {
-  background: #1565c0;
-  height: 52px;
-  font-size: 15px;
-  border-radius: 8px;
-}
-
-
 .payment-card-body {
   flex: 1 1 auto;
   padding: 24px 1rem !important;
+}
+
+.summary-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.order-layout{
+  display: flex;
+  column-gap: 5rem;
+}
+.img-thumbnail{
+  width: auto;
+  height: 150px;
+}
+label{
+  font-size: .9rem;
+  font-weight: 500;
+}
+.order-summary-card{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 32px;
+  background-color: #e1f2fe;
+  color: #2d5ab8;
+  border-radius: 2em;
+}
+.account-payment{
+  display: flex;
+}
+.account-card{
+  display: flex;
+  flex-direction: column;
 }
