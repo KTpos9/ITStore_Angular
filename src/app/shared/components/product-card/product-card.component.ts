@@ -14,6 +14,8 @@ export class ProductCardComponent implements OnInit{
   desc: string;
   @Input()
   price: string;
+  @Input()
+  id: string;
 
   constructor(){
     this.title = 'hello world';
