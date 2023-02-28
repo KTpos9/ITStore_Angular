@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MainLayoutComponent } from './shared/layouts/mainLayout/mainLayout.component'
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './pages/shop/home/home.component';
@@ -33,6 +35,8 @@ import { ProductDetailPageComponent } from './pages/shop/product-detail-page/pro
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatFormFieldModule,
+    MatInputModule,
     HttpClientModule
   ],
   providers: [],
