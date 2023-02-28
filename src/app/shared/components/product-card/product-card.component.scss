@@ -18,8 +18,13 @@
   // height: 20vw;
   // object-fit: cover;
 }
-h5{
-  font-size: 1rem;
+.card-title{
+  &:hover{
+    text-decoration: underline;
+  }
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 .btn{
   position: absolute;
