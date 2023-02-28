@@ -14,6 +14,7 @@ import { CartPageComponent } from './pages/shop/cart-page/cart-page.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
+import { ProductDetailPageComponent } from './pages/shop/product-detail-page/product-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavItemComponent } from './shared/components/nav-item/nav-item.componen
     ProductCardComponent,
     CartPageComponent,
     DashboardComponent,
-    NavItemComponent
+    NavItemComponent,
+    ProductDetailPageComponent
   ],
   imports: [
     BrowserModule,
