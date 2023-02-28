@@ -14,6 +14,7 @@ export class ProductDetailPageComponent {
   constructor(private _db: ProductsService, private route: ActivatedRoute){}
 
   ngOnInit(){
+    //get id from the route parameter
     const id: number = parseInt(this.route.snapshot.paramMap.get('id')!);
     this._db.getProductById(id)
     .subscribe((product) => {
