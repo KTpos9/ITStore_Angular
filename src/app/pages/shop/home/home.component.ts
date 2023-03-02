@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Type } from '@angular/core';
 import { Product } from 'src/app/models/Product.model';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -9,7 +9,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class HomeComponent {
   products: Product[] = [];
-
+  loading: boolean = true;
   constructor(private _db: ProductsService){
 
   }
@@ -19,9 +19,11 @@ export class HomeComponent {
       next: (products) => {
         this.products = products
         console.log(products)
+        this.loading = false;
       },
       error: (response) => {
         console.log(response)
+        console.log(this.products)
       }
     });
   }
