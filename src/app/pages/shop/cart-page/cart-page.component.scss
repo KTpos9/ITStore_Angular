@@ -71,6 +71,9 @@ label{
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  position: sticky;
+  top: 80px;
+  margin: 1.5rem;
   padding: 32px;
   background-color: #e1f2fe;
   color: #2d5ab8;
