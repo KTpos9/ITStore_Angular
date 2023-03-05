@@ -13,6 +13,27 @@ export class CartPageComponent {
 
   }
   ngOnInit() {
+    this.getCartItems()
+  }
+
+  deleteItem(id: number){
+    console.log(id);
+    this._db.deleteCart(id).subscribe({
+      next: (response) => {
+        console.log(response);
+      },
+      error: (response) => {
+        console.log(response);
+      },
+      //re-render the cart (call when the operation is completed)
+      complete: () => {
+        this.getCartItems();
+        console.log('iten deleted!');
+      }
+    });
+  }
+
+  getCartItems(){
     this._db.getCart().subscribe({
       next: (cartItem) => {
         this.cartItems = cartItem
