@@ -13,6 +13,9 @@ export class CartService {
 
   //call the api to get the product as an Observable[]
   getCart(): Observable<Cart[]>{
-    return this.http.get<Cart[]>(`${environment.baseApiUrl}/api/Cart/get`);
+    return this.http.get<Cart[]>(`${environment.baseApiUrl}/api/Cart`);
+  }
+  deleteCart(id: number){
+    return this.http.delete(`${environment.baseApiUrl}/api/Cart/${id}`)
   }
 }
