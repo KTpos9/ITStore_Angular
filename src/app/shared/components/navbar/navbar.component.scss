@@ -4,14 +4,27 @@
 // span{
 //   padding-right: 1rem;
 // }
-.active_nav{
-  border-bottom:3px solid #3ddc84;
-  color:#202124;
+// .active_nav{
+//   border-bottom:3px solid #3ddc84;
+//   color:#202124;
+// }
+.active_nav::after{
+  height: 3px;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: #3ddc84;
 }
 .nav_item{
-  &:hover {
-    border-bottom:3px solid #3ddc84;
-    color:#202124
+  position: relative;
+  &:hover::after {
+    height: 3px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: #3ddc84;
   }
 }
 a{
