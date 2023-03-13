@@ -15,6 +15,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { HttpClientModule } from '@angular/common/http';
 import { NavItemComponent } from './shared/components/nav-item/nav-item.component';
 import { ProductDetailPageComponent } from './pages/shop/product-detail-page/product-detail-page.component';
+import { LoginPageComponent } from './pages/shop/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/shop/register-page/register-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProductDetailPageComponent } from './pages/shop/product-detail-page/pro
     CartPageComponent,
     DashboardComponent,
     NavItemComponent,
-    ProductDetailPageComponent
+    ProductDetailPageComponent,
+    LoginPageComponent,
+    RegisterPageComponent
   ],
   imports: [
     BrowserModule,
