@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
 
 <main class="container">
+  <div class="bg spacer" *ngIf="router.url === '/login' || router.url === '/register'"></div>
   <router-outlet></router-outlet>
 </main>
 
