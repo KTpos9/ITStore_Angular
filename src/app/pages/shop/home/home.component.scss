@@ -37,3 +37,27 @@ mat-progress-spinner{
   position: relative;
   left: 100%;
 }
+
+@media screen and (max-width: 1200px) {
+  .grid_layout{
+    grid-template-columns: repeat(auto-fit,minmax(210px,.5fr));
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .grid_layout{
+    grid-template-columns: repeat(auto-fit,minmax(210px,.2fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid_layout{
+    grid-template-columns: repeat(auto-fit,minmax(220px,.5fr));
+  }
+}
+
+@media screen and (max-width: 496px){
+  .grid_layout{
+    grid-template-columns: repeat(auto-fit,minmax(150px,.5fr));
+  }
+}

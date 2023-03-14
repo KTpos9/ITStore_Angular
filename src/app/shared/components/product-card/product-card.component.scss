@@ -34,3 +34,22 @@
 .card-body{
   padding-bottom: 48px;
 }
+
+@media screen and (max-width: 496px){
+  .card-img-top {
+    aspect-ratio: 1 / 1 ;//unnecessary
+    border-radius: 2em;
+    width: auto;
+    height: 150px;
+  }
+  .card-title{
+    font-size: .9rem;
+  }
+  .card-text{
+    font-size: .8rem;
+  }
+  .btn{
+    font-size: .8rem;
+  }
+}
+

@@ -6,7 +6,7 @@
       <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
       </svg> -->
       <div class="card-body">
-        <a [routerLink]="['/product',id]" class="card-title fs-6">{{ title }}</a>
+        <a [routerLink]="['/product',id]" class="card-title">{{ title }}</a>
         <p class="card-text">{{ price | currency:"฿" }}</p>
         <a class="btn btn-primary rounded-5 fw-bold px-3 pb-2">Add to cart</a>
       </div>
