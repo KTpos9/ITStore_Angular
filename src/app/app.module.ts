@@ -17,6 +17,7 @@ import { NavItemComponent } from './shared/components/nav-item/nav-item.componen
 import { ProductDetailPageComponent } from './pages/shop/product-detail-page/product-detail-page.component';
 import { LoginPageComponent } from './pages/shop/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/shop/register-page/register-page.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegisterPageComponent } from './pages/shop/register-page/register-page.
     NavItemComponent,
     ProductDetailPageComponent,
     LoginPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
