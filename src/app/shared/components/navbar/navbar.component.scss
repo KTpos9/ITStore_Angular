@@ -15,16 +15,25 @@
   position: absolute;
   width: 100%;
   background: #3ddc84;
+  transform: none!important;
 }
 .nav_item{
   position: relative;
-  &:hover::after {
-    height: 3px;
+
+  &::after{
     content: '';
-    display: block;
     position: absolute;
+    height: 3px;
+    display: block;
     width: 100%;
     background: #3ddc84;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 150ms ease;
+  }
+  &:hover::after {
+    transform: scaleX(1);
   }
 }
 a{
