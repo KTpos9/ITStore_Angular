@@ -1,5 +1,5 @@
 # ITStore_Angular
-
+Successsor to [ITStore_BlazorServer](https://github.com/KTpos9/ITStore_BlazorServer). With improved UI, Web API call, cleaner code and JWT Authentication.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
 ## Development server
