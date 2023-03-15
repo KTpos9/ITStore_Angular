@@ -15,6 +15,11 @@ export class CartService {
   getCart(): Observable<Cart[]>{
     return this.http.get<Cart[]>(`${environment.baseApiUrl}/api/Cart`);
   }
+
+  addItem(item: Cart): Observable<Cart>{
+    return this.http.post<Cart>(`${environment.baseApiUrl}/api/Cart`,item);
+  }
+
   deleteCart(id: number){
     return this.http.delete(`${environment.baseApiUrl}/api/Cart/${id}`)
   }
