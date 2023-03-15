@@ -52,6 +52,5 @@
 
 <div class="grid_layout">
     <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading"></mat-progress-spinner>
-    <app-product-card *ngFor="let product of products" img={{product.productImg}} title={{product.productName}}
-      price={{product.productPrice}} id={{product.productId}}></app-product-card>
+    <app-product-card *ngFor="let product of products" [productItem]=product></app-product-card>
 </div>
