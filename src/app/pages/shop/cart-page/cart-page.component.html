@@ -14,7 +14,7 @@
         <td>
           <div class="d-flex flex-column" style="row-gap: 5px;">
             <label for="quantity">Quantity:</label>
-            <input class="form-control" type="number" name="quantity" style="width: 100px;" placeholder="1">
+            <input class="form-control" type="number" name="quantity" style="width: 100px;" placeholder="{{item.productAmount}}">
           </div>
         </td>
         <td><button class="btn btn-danger" (click)="deleteItem(item.cartID)">Delete</button></td>
@@ -32,11 +32,11 @@
       </div>
       <div class="summary-grid">
         <div>Subtotal:</div>
-        <div style="text-align: end;">1000</div>
+        <div style="text-align: end;">{{ sum | currency:'฿'}}</div>
         <div>discount:</div>
         <div style="text-align: end;">0</div>
         <div>final price:</div>
-        <div style="text-align: end;">1000</div>
+        <div style="text-align: end;">{{ sum | currency:'฿'}}</div>
       </div>
       <button class="btn btn-primary rounded-5">Checkout</button>
     </div>

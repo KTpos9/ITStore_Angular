@@ -9,9 +9,11 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartPageComponent {
   cartItems: Cart[] = [];
+  sum: number = 0
   constructor(private _db: CartService){
 
   }
+
   ngOnInit() {
     this.getCartItems()
   }
@@ -41,8 +43,14 @@ export class CartPageComponent {
     },
     error: (response) => {
       console.log(response)
+    },
+    complete: () => {
+      //get the sum of product price in cart
+      this.sum = this.cartItems.map(x => x.productPrice).reduce((a,b) => a+ b);
+      console.log(this.sum);
     }
   });
+
   }
 
 }
