@@ -1,7 +1,13 @@
 ﻿.card {
   border: none;
 }
+.img-thumbnail{
+  aspect-ratio: 1 / 1 ;//unnecessary
 
+  //resize image
+  width: auto;
+  height: 100px;
+}
 .card-header {
   padding: .5rem 1rem;
   margin-bottom: 0;
