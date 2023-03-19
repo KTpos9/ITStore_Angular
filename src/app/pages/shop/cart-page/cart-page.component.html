@@ -1,41 +1,43 @@
 <h1>Cart</h1>
 <div class="order-layout">
   <!---table-->
-  <table class="table">
-    <tbody>
-      <tr *ngFor="let item of cartItems">
-        <td>
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <img src={{item.productImg}} class="img-thumbnail"><img />
-          </div>
-        </td>
-        <td>{{item.productName}}</td>
-        <td>{{item.productPrice | currency:'฿'}}</td>
-        <td>
-          <div class="d-flex flex-column" style="row-gap: 5px;">
-            <label for="quantity">Quantity:</label>
-            <input class="form-control" type="number" name="quantity" style="width: 100px;" placeholder="{{item.productAmount}}">
-          </div>
-        </td>
-        <td><button class="btn btn-danger" (click)="deleteItem(item.cartID)">Delete</button></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="border-table">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <img src={{item.productImg}} class="img-thumbnail"><img />
+            </div>
+          </td>
+          <td>{{item.productName}}</td>
+          <td>{{item.productPrice | currency:'฿'}}</td>
+          <td>
+            <div class="d-flex flex-column" style="row-gap: 5px;">
+              <label for="quantity">Quantity:</label>
+              <input class="form-control" type="number" name="quantity" style="width: 100px;" placeholder="{{item.productAmount}}">
+            </div>
+          </td>
+          <td><button class="btn btn-danger" (click)="deleteItem(item.cartID)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- Order Summary -->
   <div>
     <div class="order-summary-card">
       <h2 class="fw-bolder">Order Summary</h2>
       <div class="d-flex" style="column-gap: 1rem;">
-        <input class="form-control w-auto" type="text" placeholder="enter promo code">
+        <input class="form-control w-auto" type="text" placeholder="Enter promo code">
         <div class="d-flex py-2"><button class="btn rounded-5" style="background-color: #3ddc84; color: white;">Apply</button></div>
       </div>
       <div class="summary-grid">
         <div>Subtotal:</div>
         <div style="text-align: end;">{{ sum | currency:'฿'}}</div>
-        <div>discount:</div>
+        <div>Discount:</div>
         <div style="text-align: end;">0</div>
-        <div>final price:</div>
+        <div>Final price:</div>
         <div style="text-align: end;">{{ sum | currency:'฿'}}</div>
       </div>
       <button class="btn btn-primary rounded-5">Checkout</button>

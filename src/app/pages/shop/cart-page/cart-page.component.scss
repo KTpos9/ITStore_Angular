@@ -63,11 +63,21 @@
 }
 .order-layout{
   display: flex;
-  column-gap: 5rem;
+  column-gap: 3.5rem;
 }
+.border-table{
+  margin-top: 1.5rem;
+  background-color: #e1f2fe;
+  border-radius: 2em;
+  padding: 3rem;
+  box-shadow: 0 1px 10px rgba(0,0,0,.1);
+}
+
+
 .img-thumbnail{
+  aspect-ratio: 1.5 / 1;
   width: auto;
-  height: 150px;
+  height: 120px;
 }
 label{
   font-size: .9rem;
