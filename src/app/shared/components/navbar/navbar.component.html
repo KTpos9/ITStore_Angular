@@ -40,7 +40,10 @@
       </div>
       <!-- sign in -->
       <div class="d-flex">
-        <a routerLink="login" style="color: #1769e0;">Sign in</a>
+        <a [hidden]="auth.isSignedIn" routerLink="login" style="color: #1769e0; font-weight: 600;">Sign in</a>
+        <div class="user-logo" [hidden]="!auth.isSignedIn">
+          <i class="fa-regular fa-user"></i>
+        </div>
       </div>
     </div>
   </div>

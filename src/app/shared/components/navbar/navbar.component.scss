@@ -61,3 +61,13 @@ a{
     background: #d7effe;
   }
 }
+.user-logo{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #5f6368;
+  border-radius: 50%;
+  cursor: pointer;
+}
