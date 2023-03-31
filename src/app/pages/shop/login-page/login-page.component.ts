@@ -60,8 +60,6 @@ export class LoginPageComponent {
             alert(response.error.message);
           },
           complete: () => {
-            localStorage.setItem("token", this.token.token);
-            console.log('token stored!', this.token.token);
             this.router.navigate(['/']);
           }
         });
