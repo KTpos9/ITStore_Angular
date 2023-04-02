@@ -60,7 +60,7 @@ export class LoginPageComponent {
             alert(response.error.message);
           },
           complete: () => {
-            this.router.navigate(['/']);
+            this.router.navigate(['/']).then(() => location.reload());
           }
         });
     }
