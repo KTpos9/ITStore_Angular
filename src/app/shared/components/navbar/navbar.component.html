@@ -31,6 +31,7 @@
         <a [hidden]="auth.isSignedIn" routerLink="login" style="color: #1769e0; font-weight: 600;">Sign in</a>
         <div class="user-logo has-dropdown" tabindex="1" [hidden]="!auth.isSignedIn">
           <i class="fa-regular fa-user"></i>
+          <!-- dropdown -->
           <ul class="_dropdown">
             <li class="_dropdown-item user-profile">
               <div class="d-flex">
@@ -48,7 +49,6 @@
             <li class="_dropdown-item bg-transparent menu-item" style="border-bottom: 2px solid white;">
               <a href=""><i class="fa-solid fa-arrow-right-from-bracket me-4"></i>Sign Out</a>
             </li>
-            <hr>
           </ul>
         </div>
       </div>
