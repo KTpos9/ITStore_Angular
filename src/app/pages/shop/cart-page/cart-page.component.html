@@ -15,7 +15,8 @@
           <td>
             <div class="d-flex flex-column" style="row-gap: 5px;">
               <label for="quantity">Quantity:</label>
-              <input class="form-control" type="number" name="quantity" style="width: 100px;" placeholder="{{item.productAmount}}">
+              <input class="form-control" type="number" name="quantity" style="width: 100px;"
+                placeholder="{{item.productAmount}}">
             </div>
           </td>
           <td><button class="btn btn-danger" (click)="deleteItem(item.cartID)">Delete</button></td>
@@ -46,86 +47,92 @@
 
 </div>
 
-<!--Address-->
-<div class="account-payment">
 
-  <div>
-    <div class="order-summary-card">
-      <h4>Order Summary</h4>
-      <div class="d-flex" style="column-gap: 1rem;">
-        <input type="text" placeholder="enter promo code">
-        <button class="btn btn-secondary rounded-5">Apply</button>
+<div class="row g-0 justify-content-between mt-5">
+  <!--Address-->
+  <div class="col-5">
+    <h4 class="mb-3">Billing address</h4>
+      <div class="row g-3">
+        <div class="col-12">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+        </div>
+
+        <div class="col-12">
+          <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+          <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+        </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Country</label>
+          <select class="form-select" id="country" required>
+            <option value="">Choose...</option>
+            <option>United States</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <select class="form-select" id="state" required>
+            <option value="">Choose...</option>
+            <option>California</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <label for="zip" class="form-label">Zip</label>
+          <input type="text" class="form-control" id="zip" placeholder="" required>
+        </div>
       </div>
-      <div class="summary-grid">
-        <div>Subtotal:</div>
-        <div style="text-align: end;">1000</div>
-        <div>discount:</div>
-        <div style="text-align: end;">0</div>
-        <div>final price:</div>
-        <div style="text-align: end;">1000</div>
+
+      <hr class="my-4">
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="same-address">
+        <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
       </div>
-      <button class="btn btn-primary rounded-5">Checkout</button>
-    </div>
+
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="save-info">
+        <label class="form-check-label" for="save-info">Save this information for next time</label>
+      </div>
   </div>
 
   <!-- Payment -->
-  <div class="payment-card">
-    <div class="card">
-      <div class="card-header p-0">
-        <h2 class="mb-0">
-          <button class="btn btn-light btn-block text-left p-3 rounded-0" data-toggle="collapse"
-            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <div class="d-flex align-items-center justify-content-between">
-
-              <span>Credit card</span>
-              <div class="icons">
-                <img src="https://i.imgur.com/2ISgYja.png" width="30">
-                <img src="https://i.imgur.com/W1vtnOV.png" width="30">
-                <img src="https://i.imgur.com/35tC99g.png" width="30">
-                <img src="https://i.imgur.com/2ISgYja.png" width="30">
-              </div>
-
-            </div>
-          </button>
-        </h2>
+  <div class="col-5">
+    <h4 class="mb-3">Payment</h4>
+    <div class="my-3">
+      <div class="form-check">
+        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+        <label class="form-check-label" for="credit">Credit card</label>
       </div>
-
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-        <div class="card-body payment-card-body">
-
-          <span class="font-weight-normal card-text">Card Number</span>
-          <div class="input">
-            <i class="fa fa-credit-card"></i>
-            <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
-          </div>
-
-          <div class="row mt-3 mb-3">
-            <div class="col-md-6">
-              <span class="font-weight-normal card-text">Expiry Date</span>
-              <div class="input">
-                <i class="fa fa-calendar"></i>
-                <input type="text" class="form-control" placeholder="MM/YY">
-              </div>
-            </div>
-
-            <div class="col-md-6">
-
-              <span class="font-weight-normal card-text">CVC/CVV</span>
-              <div class="input">
-                <i class="fa fa-lock"></i>
-                <input type="text" class="form-control" placeholder="000">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl
-              certificate</span>
-            <button class="btn btn-primary mt-3 mb-3">Checkout</button>
-          </div>
-        </div>
+      <div class="form-check">
+        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+        <label class="form-check-label" for="debit">Debit card</label>
+      </div>
+      <div class="form-check">
+        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+        <label class="form-check-label" for="paypal">PayPal</label>
+      </div>
+    </div>
+    <div class="row gy-3">
+      <div class="col-md-6">
+        <label for="cc-name" class="form-label">Name on card</label>
+        <input type="text" class="form-control" id="cc-name" placeholder="" required>
+        <small class="text-muted">Full name as displayed on card</small>
+      </div>
+      <div class="col-md-6">
+        <label for="cc-number" class="form-label">Credit card number</label>
+        <input type="text" class="form-control" id="cc-number" placeholder="" required>
+      </div>
+      <div class="col-md-3">
+        <label for="cc-expiration" class="form-label">Expiration</label>
+        <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+      </div>
+      <div class="col-md-3">
+        <label for="cc-cvv" class="form-label">CVV</label>
+        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
       </div>
     </div>
   </div>
 </div>
-
-
