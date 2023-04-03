@@ -6,6 +6,7 @@ import { CartPageComponent } from './pages/shop/cart-page/cart-page.component';
 import { ProductDetailPageComponent } from './pages/shop/product-detail-page/product-detail-page.component';
 import { LoginPageComponent } from './pages/shop/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/shop/register-page/register-page.component';
+import { ProductPageComponent } from './pages/shop/product-page/product-page.component';
 
 const routes: Routes = [{
   path: '',
@@ -13,6 +14,10 @@ const routes: Routes = [{
   children: [{
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'product',
+    component: ProductPageComponent
   },
   {
     path: 'product/:id',
