@@ -14,7 +14,7 @@ export class LoginPageComponent {
   token: loginResponse;
   loginFormGroup: FormGroup;
 
-  constructor(private auth: AuthService, private router: Router) {
+  constructor(private auth: AuthService) {
     this.initForm();
   }
 
