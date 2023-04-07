@@ -1,0 +1,21 @@
+.media-scroller{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 220px;
+  gap: 1rem;
+  overflow-x: auto;
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+@media screen and (max-width: 496px){
+  .media-scroller{
+    grid-auto-columns: 150px;
+  }
+}

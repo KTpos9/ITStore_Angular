@@ -21,6 +21,7 @@ import { LoginPageComponent } from './pages/shop/login-page/login-page.component
 import { RegisterPageComponent } from './pages/shop/register-page/register-page.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductPageComponent } from './pages/shop/product-page/product-page.component';
+import { ProductScrollerComponent } from './shared/components/product-scroller/product-scroller.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProductPageComponent } from './pages/shop/product-page/product-page.com
     LoginPageComponent,
     RegisterPageComponent,
     FooterComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    ProductScrollerComponent
   ],
   imports: [
     BrowserModule,
