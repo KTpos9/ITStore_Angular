@@ -13,6 +13,11 @@ export class HomeComponent {
   constructor(private _db: ProductsService){
 
   }
+
+  getProductsByCategory(category: string){
+    return this.products.filter(product => product.productCategory == category);
+  }
+
   ngOnInit() {
     this._db.getProducts()
     .subscribe({

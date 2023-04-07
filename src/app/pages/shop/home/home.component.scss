@@ -1,10 +1,9 @@
-.grid_layout{
+.grid-scroller-layout{
   display: grid;
-  row-gap: 5rem;
-  column-gap: 2rem;
-  grid-template-columns: repeat(auto-fit,minmax(220px,.5fr));
+  gap: 2rem;
 }
-.grid_wrapper {
+
+.grid_carousel {
     display: grid;
 /*    place-items: center;
     align-content: center;*/
@@ -36,28 +35,4 @@
 mat-progress-spinner{
   position: relative;
   left: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-  .grid_layout{
-    grid-template-columns: repeat(auto-fit,minmax(210px,.5fr));
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .grid_layout{
-    grid-template-columns: repeat(auto-fit,minmax(210px,.2fr));
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .grid_layout{
-    grid-template-columns: repeat(auto-fit,minmax(220px,.5fr));
-  }
-}
-
-@media screen and (max-width: 496px){
-  .grid_layout{
-    grid-template-columns: repeat(auto-fit,minmax(150px,.5fr));
-  }
 }

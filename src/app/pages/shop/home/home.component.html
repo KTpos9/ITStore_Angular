@@ -1,4 +1,4 @@
-<div class="grid_wrapper m-5">
+<div class="grid_carousel m-5">
   <div class="item img_grid">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
       style="max-width:670px; max-height:492px;">
@@ -50,7 +50,25 @@
   </div>
 </div>
 
-<div class="grid_layout">
-    <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading"></mat-progress-spinner>
-    <app-product-card *ngFor="let product of products" [productItem]=product></app-product-card>
+<div class="grid-scroller-layout">
+  <div class="overflow-auto">
+    <app-product-scroller [title]="'Best Seller'" [products]="products.slice(0,6)"></app-product-scroller>
+    <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading" style="transform: translateX(-640px);"></mat-progress-spinner>
+  </div>
+  <div class="overflow-auto">
+    <app-product-scroller [title]="'CPU'" [products]="getProductsByCategory('CPU')"></app-product-scroller>
+    <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading" style="transform: translateX(-640px);"></mat-progress-spinner>
+  </div>
+  <div class="overflow-auto">
+    <app-product-scroller [title]="'Motherboard'" [products]="getProductsByCategory('MAINBOARD')"></app-product-scroller>
+    <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading" style="transform: translateX(-640px);"></mat-progress-spinner>
+  </div>
+  <div class="overflow-auto">
+    <app-product-scroller [title]="'Graphic Card'" [products]="getProductsByCategory('GPU')"></app-product-scroller>
+    <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading" style="transform: translateX(-640px);"></mat-progress-spinner>
+  </div>
+  <div class="overflow-auto">
+    <app-product-scroller [title]="'RAM'" [products]="getProductsByCategory('RAM')"></app-product-scroller>
+    <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading" style="transform: translateX(-640px);"></mat-progress-spinner>
+  </div>
 </div>
