@@ -1,5 +1,5 @@
 <h1 style="margin-top: 5rem;">All Products</h1>
 <div class="grid_layout">
   <mat-progress-spinner [mode]='"indeterminate"' *ngIf="loading"></mat-progress-spinner>
-  <app-product-card *ngFor="let product of products" [productItem]=product></app-product-card>
+  <app-product-card *ngFor="let product of this._db.products" [productItem]=product></app-product-card>
 </div>

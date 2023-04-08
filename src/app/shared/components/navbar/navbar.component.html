@@ -22,10 +22,10 @@
     <div class="d-flex gap-4 align-items-center">
       <!-- search bar -->
       <div class="d-flex">
-        <div class="search-bar">
-          <input class="search-bar__input" type="text" placeholder="search">
-          <button class="search-bar__submit px-3"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
+        <form class="search-bar" [formGroup]="searchFormGroup" (ngSubmit)="search()">
+          <input class="search-bar__input" type="text" placeholder="search" formControlName = "searchBox">
+          <button type="submit" class="search-bar__submit px-3"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
       </div>
       <!-- sign in -->
       <div class="d-flex">
