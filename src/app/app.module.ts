@@ -30,7 +30,6 @@ import { AddProductComponent } from './pages/admin/product-list/add-product/add-
 import { UpdateProductComponent } from './pages/admin/product-list/update-product/update-product.component';
 import { BodyComponent } from './shared/layouts/body/body.component';
 import { MemberListComponent } from './pages/admin/member-list/member-list.component';
-import { MemberAddComponent } from './pages/admin/member-list/member-add/member-add.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +55,6 @@ import { MemberAddComponent } from './pages/admin/member-list/member-add/member-
     UpdateProductComponent,
     BodyComponent,
     MemberListComponent,
-    MemberAddComponent,
   ],
   imports: [
     BrowserModule,
