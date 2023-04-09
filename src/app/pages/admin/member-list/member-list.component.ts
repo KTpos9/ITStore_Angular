@@ -47,7 +47,7 @@ export class MemberListComponent implements OnInit{
     });
   }
 
-  filterProducts(event: Event) {
+  filterMembers(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
