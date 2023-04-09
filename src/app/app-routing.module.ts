@@ -8,6 +8,8 @@ import { LoginPageComponent } from './pages/shop/login-page/login-page.component
 import { RegisterPageComponent } from './pages/shop/register-page/register-page.component';
 import { ProductPageComponent } from './pages/shop/product-page/product-page.component';
 import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout.component';
+import { ProductListComponent } from './pages/admin/product-list/product-list.component';
+import { AddProductComponent } from './pages/admin/product-list/add-product/add-product.component';
 
 const routes: Routes = [{
   path: '',
@@ -40,6 +42,14 @@ const routes: Routes = [{
 {
   path: 'admin',
   component: AdminLayoutComponent,
+  children: [{
+    path: 'product-list',
+    component: ProductListComponent,
+  },
+  {
+    path: 'product-add',
+    component: AddProductComponent
+  }]
 }
 ];
 
