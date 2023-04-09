@@ -33,6 +33,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getOrder();
     this.getProducts();
+    this.getMember();
   }
 
   getMember() {
