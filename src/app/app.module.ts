@@ -25,6 +25,7 @@ import { ProductScrollerComponent } from './shared/components/product-scroller/p
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
 import { SublevelMenuComponent } from './shared/components/sidenav/sublevel-menu.component';
 import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout.component';
+import { ProductListComponent } from './pages/admin/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout
     ProductScrollerComponent,
     SidenavComponent,
     SublevelMenuComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
