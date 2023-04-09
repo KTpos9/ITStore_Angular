@@ -27,6 +27,7 @@ import { SublevelMenuComponent } from './shared/components/sidenav/sublevel-menu
 import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout.component';
 import { ProductListComponent } from './pages/admin/product-list/product-list.component';
 import { AddProductComponent } from './pages/admin/product-list/add-product/add-product.component';
+import { UpdateProductComponent } from './pages/admin/product-list/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AddProductComponent } from './pages/admin/product-list/add-product/add-
     SublevelMenuComponent,
     AdminLayoutComponent,
     ProductListComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
