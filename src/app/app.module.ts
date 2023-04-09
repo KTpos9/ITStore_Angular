@@ -29,6 +29,7 @@ import { ProductListComponent } from './pages/admin/product-list/product-list.co
 import { AddProductComponent } from './pages/admin/product-list/add-product/add-product.component';
 import { UpdateProductComponent } from './pages/admin/product-list/update-product/update-product.component';
 import { BodyComponent } from './shared/layouts/body/body.component';
+import { MemberListComponent } from './pages/admin/member-list/member-list.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { BodyComponent } from './shared/layouts/body/body.component';
     ProductListComponent,
     AddProductComponent,
     UpdateProductComponent,
-    BodyComponent
+    BodyComponent,
+    MemberListComponent
   ],
   imports: [
     BrowserModule,
