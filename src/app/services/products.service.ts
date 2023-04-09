@@ -48,5 +48,7 @@ export class ProductsService {
     return this.http.post<Product>(`${environment.baseApiUrl}/api/Product`, product);
   }
 
-  
+  updateProduct(product: Product): Observable<Product>{
+    return this.http.put<Product>(`${environment.baseApiUrl}/api/Product/${product.productId}`, product);
+  }
 }
