@@ -12,11 +12,11 @@ export const navbarData: INavbarData[] = [
         label: 'Products',
         items: [
             {
-                routelink: 'product',
+                routelink: 'product-list',
                 label: 'Product list'
             },
             {
-                routelink: 'products/add',
+                routelink: 'product-add',
                 label: 'Add Product'
             }
         ]
