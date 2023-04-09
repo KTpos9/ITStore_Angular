@@ -27,11 +27,11 @@ export const navbarData: INavbarData[] = [
         label: 'Members',
         items: [
             {
-                routelink: 'members/list',
+                routelink: 'members-list',
                 label: 'Member list'
             },
             {
-                routelink: 'members/add',
+                routelink: 'members-add',
                 label: 'Add Member'
             }
         ]
