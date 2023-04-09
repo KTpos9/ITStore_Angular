@@ -43,4 +43,10 @@ export class ProductsService {
       }
     });
   }
+
+  addProduct(product: Product): Observable<Product>{
+    return this.http.post<Product>(`${environment.baseApiUrl}/api/Product`, product);
+  }
+
+  
 }
