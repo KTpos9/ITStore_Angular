@@ -1,4 +1,3 @@
-import { NONE_TYPE } from '@angular/compiler';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/app/models/Product.model';
 import { ProductsService } from 'src/app/services/products.service';

@@ -1,1 +1,57 @@
-<p>update-member works!</p>
+<div class="modal" tabindex="-1" [ngClass]="{'d-block': showModal}">
+    <div class="modal-dialog container" (click)="$event.stopPropagation()">
+      <div class="modal-content w-100">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4">อัปเดตรายการสมาชิก</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div id="accordion" role="tablist">
+            <div class="card" role="presentation">
+              <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                  <a data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    รายละเอียดสมาชิก
+                  </a>
+                </h5>
+              </div>
+
+              <div id="collapseOne" class="collapse show" data-bs-parent="#accordion" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3" *ngIf="selectedMember">
+                      <label for="member-firstname" class="form-label">ชื่อสมาชิก</label>
+                      <input type="text" id="member-firstname" name="FirstName" class="form-control form-control-lg" [(ngModel)]="selectedMember.FirstName">
+                    </div>
+                    <div class="mb-3" *ngIf="selectedMember">
+                      <label for="member-lastname" class="form-label">นามสกุลสมาชิก</label>
+                      <input type="text" id="member-lastname" name="LastName" class="form-control form-control-lg" [(ngModel)]="selectedMember.LastName">
+                    </div>
+                    <div class="mb-3" *ngIf="selectedMember">
+                      <label for="member-email" class="form-label">อีเมลสมาชิก</label>
+                      <input type="email" id="member-email" name="Email" class="form-control form-control-lg" [(ngModel)]="selectedMember.Email">
+                    </div>
+                    <div class="mb-3" *ngIf="selectedMember">
+                      <label for="member-password" class="form-label">รหัสผ่านสมาชิก</label>
+                      <input type="password" id="member-password" name="Password" class="form-control form-control-lg" [(ngModel)]="selectedMember.Password">
+                    </div>
+                    <div class="mb-3" *ngIf="selectedMember">
+                      <label for="product-role" class="form-label">บทบาทสมาชิก</label>
+                      <select id="product-role" name="Role" class="form-control form-control-lg" [(ngModel)]="selectedMember.Role">
+                        <option value="" disabled>--เลือกบทบาท--</option>
+                        <option *ngFor="let role of Roles" [value]="role">{{role}}</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="updateMember()">Save changes</button>
+        </div>
+      </div>
+    </div>
+</div>
