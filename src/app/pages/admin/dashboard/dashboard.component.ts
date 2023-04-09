@@ -35,17 +35,10 @@ export class DashboardComponent implements OnInit {
     this.getProducts();
   }
 
-  getMembers() {
-    this.memberService.getMembers().subscribe({
-      next: (member) => {
-        this.members = member;
-      },
-      error: (response) => {
-        console.log(response);
-      },
-      complete: () => {
-        console.log("Successfully get members");
-      }
+  getMember() {
+    this.memberService.getMembers().subscribe((members: Member[]) => {
+      this.members = members;
+      this.totalMemberCount = members.length;
     });
   }
 
