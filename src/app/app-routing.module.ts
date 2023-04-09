@@ -7,6 +7,7 @@ import { ProductDetailPageComponent } from './pages/shop/product-detail-page/pro
 import { LoginPageComponent } from './pages/shop/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/shop/register-page/register-page.component';
 import { ProductPageComponent } from './pages/shop/product-page/product-page.component';
+import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout.component';
 
 const routes: Routes = [{
   path: '',
@@ -35,7 +36,12 @@ const routes: Routes = [{
     path:'register',
     component: RegisterPageComponent,
   }]
-}];
+},
+{
+  path: 'admin',
+  component: AdminLayoutComponent,
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
