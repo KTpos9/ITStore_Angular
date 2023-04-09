@@ -14,7 +14,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class MemberListComponent implements OnInit{
   dataSource: MatTableDataSource<Member>;
-  displayedColumns: string[] = ['MemberId', 'FirstNamee', 'LastName', 'Email', 'Password','Role']
+  displayedColumns: string[] = ['MemberId', 'FirstName', 'LastName', 'Email', 'Password','Role']
 
   @ViewChild(UpdateMemberComponent) updateMemberModal: UpdateMemberComponent;
   @ViewChild(MatPaginator) paginator: MatPaginator;
