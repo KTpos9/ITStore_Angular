@@ -10,13 +10,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./register-page.component.scss']
 })
 export class RegisterPageComponent {
-  loginFormGroup: FormGroup;
+  registerFormGroup: FormGroup;
   constructor(private auth: AuthService, private router: Router) {
     this.initForm();
   }
 
   initForm() {
-    this.loginFormGroup = new FormGroup({
+    this.registerFormGroup = new FormGroup({
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
@@ -26,15 +26,15 @@ export class RegisterPageComponent {
   }
 
   register() {
-    if(this.loginFormGroup.get('password')?.value != this.loginFormGroup.get('confirmPassword')?.value){
+    if(this.registerFormGroup.get('password')?.value != this.registerFormGroup.get('confirmPassword')?.value){
       alert('Password Doesn\'t match');
       return;
     }
     let newMember: Member = {
-      FirstName: this.loginFormGroup.get('firstName')?.value,
-      LastName: this.loginFormGroup.get('lastName')?.value,
-      Email: this.loginFormGroup.get('email')?.value,
-      Password: this.loginFormGroup.get('firstName')?.value,
+      FirstName: this.registerFormGroup.get('firstName')?.value,
+      LastName: this.registerFormGroup.get('lastName')?.value,
+      Email: this.registerFormGroup.get('email')?.value,
+      Password: this.registerFormGroup.get('firstName')?.value,
       Role: 'User',
       MemberId: 0
     }

@@ -3,30 +3,30 @@
     <div class="content">
       <h1 class="fw-bolder text-center">Register</h1>
       <p class="fs-6 text-center">Save your shipping and payment information for a hassle-free experience</p>
-      <div class="d-grid">
+      <form [formGroup]="registerFormGroup" class="d-grid">
         <div class="d-flex justify-content-between">
           <mat-form-field appearance="outline">
             <mat-label>First Name</mat-label>
-            <input matInput>
+            <input matInput formControlName="firstName">
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
-            <input matInput>
+            <input matInput formControlName="lastName">
           </mat-form-field>
         </div>
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput>
+          <input matInput formControlName="email">
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput>
+          <input matInput formControlName="password">
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Confirm Password</mat-label>
-          <input matInput>
+          <input matInput formControlName="confirmPassword">
         </mat-form-field>
-      </div>
+      </form>
       <div class="d-flex justify-content-end align-content-center">
         <button class="btn btn-primary rounded-5 px-4 py-2">Register</button>
       </div>
