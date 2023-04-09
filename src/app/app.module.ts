@@ -22,6 +22,16 @@ import { RegisterPageComponent } from './pages/shop/register-page/register-page.
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductPageComponent } from './pages/shop/product-page/product-page.component';
 import { ProductScrollerComponent } from './shared/components/product-scroller/product-scroller.component';
+import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
+import { SublevelMenuComponent } from './shared/components/sidenav/sublevel-menu.component';
+import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout.component';
+import { ProductListComponent } from './pages/admin/product-list/product-list.component';
+import { AddProductComponent } from './pages/admin/product-list/add-product/add-product.component';
+import { UpdateProductComponent } from './pages/admin/product-list/update-product/update-product.component';
+import { BodyComponent } from './shared/layouts/body/body.component';
+import { MemberListComponent } from './pages/admin/member-list/member-list.component';
+import { AddMemberComponent } from './pages/admin/member-list/add-member/add-member.component';
+import { UpdateMemberComponent } from './pages/admin/member-list/update-member/update-member.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +48,17 @@ import { ProductScrollerComponent } from './shared/components/product-scroller/p
     RegisterPageComponent,
     FooterComponent,
     ProductPageComponent,
-    ProductScrollerComponent
+    ProductScrollerComponent,
+    SidenavComponent,
+    SublevelMenuComponent,
+    AdminLayoutComponent,
+    ProductListComponent,
+    AddProductComponent,
+    UpdateProductComponent,
+    BodyComponent,
+    MemberListComponent,
+    AddMemberComponent,
+    UpdateMemberComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +67,8 @@ import { ProductScrollerComponent } from './shared/components/product-scroller/p
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

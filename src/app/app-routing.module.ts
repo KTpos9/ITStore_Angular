@@ -7,6 +7,12 @@ import { ProductDetailPageComponent } from './pages/shop/product-detail-page/pro
 import { LoginPageComponent } from './pages/shop/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/shop/register-page/register-page.component';
 import { ProductPageComponent } from './pages/shop/product-page/product-page.component';
+import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout.component';
+import { ProductListComponent } from './pages/admin/product-list/product-list.component';
+import { AddProductComponent } from './pages/admin/product-list/add-product/add-product.component';
+import { MemberListComponent } from './pages/admin/member-list/member-list.component';
+import { AddMemberComponent } from './pages/admin/member-list/add-member/add-member.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 
 const routes: Routes = [{
   path: '',
@@ -35,7 +41,41 @@ const routes: Routes = [{
     path:'register',
     component: RegisterPageComponent,
   }]
-}];
+},
+{
+  path: 'admin',
+  component: AdminLayoutComponent,
+  children: [{
+    path: 'product-list',
+    component: ProductListComponent
+  },
+  {
+    path: 'product-add',
+    component: AddProductComponent
+  },
+  {
+   path: 'members-list',
+   component: MemberListComponent 
+  },
+  {
+    path: 'members-add',
+    component: AddMemberComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'admin',
+    component: DashboardComponent
+  },
+  {
+    path: 'settings',
+    redirectTo: '',
+    pathMatch: 'full'
+  }]
+},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,1 +1,56 @@
-<p>dashboard works!</p>
+<div class="row g-0">
+    <!--Column2-->
+    <div class="col g-0">
+      <!--Row1 Profile Stat-->
+      <div class="row g-1 gap-2 p-2">
+        <div class="d-flex fw-bold fs-3 ps-3">Overview</div>
+        <!--1st column-->
+        <div class="col">
+          <div class="d-flex justify-content-between">
+            <div class="card-flex">
+              <div class="icon" style="background-color: #9493f9;">
+                <i class="fa-solid fa-box fs-3" style="padding: 0 .75rem 0 .75rem;"></i>
+              </div>
+              <div class="desc d-flex flex-column flex-grow-0 flex-shrink-0">
+                <div class="text">Total products</div>
+                <div class="number fw-bold">{{totalProductsCount}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--2nd column-->
+        <div class="col">
+          <div class="d-flex justify-content-between">
+            <div class="card-flex">
+              <div class="icon" style="background-color: #54c5ec;">
+                <i class="fa-solid fa-user fs-3" style="padding: 0 .75rem 0 .75rem;"></i>
+              </div>
+              <div class="desc d-flex flex-column flex-grow-0 flex-shrink-0">
+                <div class="text">Total members</div>
+                <div class="number fw-bold">{{totalMemberCount}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Row2 Profile visit Bar-graph-->
+      <div class="row g-1 gap-2 p-2">
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Products by Category</h5>
+              <canvas id="pie-chart" class="chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Profits</h5>
+              <canvas id="line-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
