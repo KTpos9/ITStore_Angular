@@ -59,7 +59,8 @@ import { UpdateProductComponent } from './pages/admin/product-list/update-produc
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
