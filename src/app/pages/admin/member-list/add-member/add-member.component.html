@@ -1,1 +1,34 @@
-<p>add-member works!</p>
+<div class="card">
+    <div class="card-header blue">
+      Add Member
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="form-group">
+          <label for="FirstName">First Name:</label>
+          <input type="text" id="FirstName" class="form-control" [(ngModel)]="newMember.FirstName" name="FirstName" required>
+        </div>
+        <div class="form-group">
+          <label for="LastName">Last Name:</label>
+          <input type="text" id="LastName" class="form-control" [(ngModel)]="newMember.LastName" name="LastName" required>
+        </div>
+        <div class="form-group">
+          <label for="Email">Email:</label>
+          <input type="email" id="Email" class="form-control" [(ngModel)]="newMember.Email" name="Email" required>
+        </div>
+        <div class="form-group">
+          <label for="Password">Email:</label>
+          <input type="password" id="Password" class="form-control" [(ngModel)]="newMember.Password" name="Password" required>
+        </div>
+        <div class="form-group">
+          <label for="Role">Role:</label>
+          <select id="Role" class="form-control" [(ngModel)]="newMember.Role" name="Role" required>
+            <option value="" disabled>กรุณาเลือก</option>
+            <option *ngFor="let role of Roles" [value]="role">{{role}}</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="addMember()">Add Member</button>
+      </form>
+    </div>
+  </div>
