@@ -23,6 +23,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductPageComponent } from './pages/shop/product-page/product-page.component';
 import { ProductScrollerComponent } from './shared/components/product-scroller/product-scroller.component';
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
+import { SublevelMenuComponent } from './shared/components/sidenav/sublevel-menu.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     FooterComponent,
     ProductPageComponent,
     ProductScrollerComponent,
-    SidenavComponent
+    SidenavComponent,
+    SublevelMenuComponent
   ],
   imports: [
     BrowserModule,
