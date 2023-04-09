@@ -14,6 +14,7 @@ import { MemberService } from 'src/app/services/member.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  members: Member[];
   products: Product[];
   orders: Order[];
   Date: any;
@@ -31,10 +32,24 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.getOrder();
-    this.loadProducts();
+    this.getProducts();
   }
 
-  loadProducts() {
+  getMembers() {
+    this.memberService.getMembers().subscribe({
+      next: (member) => {
+        this.members = member;
+      },
+      error: (response) => {
+        console.log(response);
+      },
+      complete: () => {
+        console.log("Successfully get members");
+      }
+    });
+  }
+
+  getProducts() {
     this.productService.getProducts().subscribe((products: Product[]) => {
       this.products = products;
       this.creatPieChart();
