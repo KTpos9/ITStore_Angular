@@ -28,6 +28,7 @@ import { AdminLayoutComponent } from './shared/layouts/admin-layout/admin-layout
 import { ProductListComponent } from './pages/admin/product-list/product-list.component';
 import { AddProductComponent } from './pages/admin/product-list/add-product/add-product.component';
 import { UpdateProductComponent } from './pages/admin/product-list/update-product/update-product.component';
+import { BodyComponent } from './shared/layouts/body/body.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { UpdateProductComponent } from './pages/admin/product-list/update-produc
     AdminLayoutComponent,
     ProductListComponent,
     AddProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
