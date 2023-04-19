@@ -68,11 +68,6 @@ const routes: Routes = [{
   {
     path: 'admin',
     component: DashboardComponent
-  },
-  {
-    path: 'settings',
-    redirectTo: '',
-    pathMatch: 'full'
   }]
 },
 ];
