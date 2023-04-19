@@ -42,7 +42,7 @@ export class MemberListComponent implements OnInit{
         console.log(response);
       },
       complete: () => {
-        console.log("Successfully get products");
+        console.log("Successfully get members");
       }
     });
   }
