@@ -34,7 +34,7 @@ export class RegisterPageComponent {
       FirstName: this.registerFormGroup.get('firstName')?.value,
       LastName: this.registerFormGroup.get('lastName')?.value,
       Email: this.registerFormGroup.get('email')?.value,
-      Password: this.registerFormGroup.get('firstName')?.value,
+      Password: this.registerFormGroup.get('password')?.value,
       Role: 'User',
       MemberId: 0
     }
@@ -47,7 +47,7 @@ export class RegisterPageComponent {
         alert('registration error, plese try again');
       },
       complete: () => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
       }
     })
   }

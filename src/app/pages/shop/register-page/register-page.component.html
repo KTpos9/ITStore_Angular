@@ -3,7 +3,7 @@
     <div class="content">
       <h1 class="fw-bolder text-center">Register</h1>
       <p class="fs-6 text-center">Save your shipping and payment information for a hassle-free experience</p>
-      <form [formGroup]="registerFormGroup" class="d-grid">
+      <form [formGroup]="registerFormGroup" class="d-grid" (ngSubmit)="register()">
         <div class="d-flex justify-content-between">
           <mat-form-field appearance="outline">
             <mat-label>First Name</mat-label>
@@ -20,16 +20,16 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput formControlName="password">
+          <input matInput formControlName="password" type="password">
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>Confirm Password</mat-label>
-          <input matInput formControlName="confirmPassword">
+          <input matInput formControlName="confirmPassword" type="password">
         </mat-form-field>
+        <div class="d-flex justify-content-end align-content-center">
+          <button type="submit" class="btn btn-primary rounded-5 px-4 py-2">Register</button>
+        </div>
       </form>
-      <div class="d-flex justify-content-end align-content-center">
-        <button type="submit" class="btn btn-primary rounded-5 px-4 py-2">Register</button>
-      </div>
     </div>
   </div>
 </div>
