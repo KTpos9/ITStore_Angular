@@ -44,6 +44,9 @@
                 </div>
               </div>
             </li>
+            <li [hidden]="auth.isSignedIn && role === 'User'" class="_dropdown-item menu-item">
+              <a routerLink="/admin/dashboard"><i class="fa-solid fa-clock-rotate-left me-4"></i>Admin Page</a>
+            </li>
             <li class="_dropdown-item menu-item last">
               <a href=""><i class="fa-solid fa-clock-rotate-left me-4"></i>Order history</a>
             </li>
