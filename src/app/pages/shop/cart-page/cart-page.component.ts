@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Cart } from 'src/app/models/Cart.model';
 import { CartService } from 'src/app/services/cart.service';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-page',
@@ -10,7 +12,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartPageComponent {
   cartItems: Cart[] = [];
   sum: number = 0
-  constructor(private _db: CartService){
+  constructor(private _db: CartService, public dialog: MatDialog, private router: Router){
 
   }
 
@@ -50,8 +52,11 @@ export class CartPageComponent {
       console.log(this.sum);
     }
   });
-
   }
-
+  onCheckout(){
+    let confirmAction = confirm("Your order has been recived");
+    if(confirmAction){
+      this.router.navigate(['/']);
+    }
+  }
 }
-

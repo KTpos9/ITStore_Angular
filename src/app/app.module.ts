@@ -32,6 +32,7 @@ import { BodyComponent } from './shared/layouts/body/body.component';
 import { MemberListComponent } from './pages/admin/member-list/member-list.component';
 import { AddMemberComponent } from './pages/admin/member-list/add-member/add-member.component';
 import { UpdateMemberComponent } from './pages/admin/member-list/update-member/update-member.component';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { UpdateMemberComponent } from './pages/admin/member-list/update-member/u
     RouterModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
