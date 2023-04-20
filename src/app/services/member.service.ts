@@ -33,7 +33,7 @@ export class MemberService {
   }
 
   updateMember(member: Member): Observable<Member>{
-    return this.http.put<Member>(`${environment.baseApiUrl}/api/Member/${member.MemberId}`, member);
+    return this.http.put<Member>(`${environment.baseApiUrl}/api/Member`, member);
   }
 
   deleteMember(MemberId: number): Observable<void> {

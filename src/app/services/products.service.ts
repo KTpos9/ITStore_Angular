@@ -49,7 +49,7 @@ export class ProductsService {
   }
 
   updateProduct(product: Product): Observable<Product>{
-    return this.http.put<Product>(`${environment.baseApiUrl}/api/Product/${product.productId}`, product);
+    return this.http.put<Product>(`${environment.baseApiUrl}/api/Product`, product);
   }
 
   deleteProduct(productId: number): Observable<void> {
