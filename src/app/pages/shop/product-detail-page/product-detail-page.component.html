@@ -1,4 +1,16 @@
-<p>product-detail-page works!</p>
-<img src="{{product.productImg}}" alt="">
-<div>{{product.productName}}</div>
-<div>{{product.productPrice}}</div>
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col">
+      <div class="d-flex justify-content-center"><img src="{{product.productImg}}" class="card-img-top" alt=""></div>
+    </div>
+    <div class="col">
+      <div>
+        <div class="fs-3">{{product.productName}}</div>
+      </div>
+      <div>
+        <div>{{product.productPrice | currency:'฿'}}</div>
+      </div>
+      <a class="btn btn-primary rounded-5 fw-bold px-3 pb-2 mt-5" (click)="onButtonClick()">Add to cart</a>
+    </div>
+  </div>
+</div>
