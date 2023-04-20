@@ -14,7 +14,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class MemberListComponent implements OnInit{
   dataSource: MatTableDataSource<Member>;
-  displayedColumns: string[] = ['MemberId', 'FirstName', 'LastName', 'Email', 'Password','Role']
+  displayedColumns: string[] = ['memberId', 'email', 'password', 'firstName', 'lastName', 'role', 'actions']
 
   @ViewChild(UpdateMemberComponent) updateMemberModal: UpdateMemberComponent;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -42,7 +42,7 @@ export class MemberListComponent implements OnInit{
         console.log(response);
       },
       complete: () => {
-        console.log("Successfully get products");
+        console.log("Successfully get members");
       }
     });
   }
@@ -94,3 +94,5 @@ export class MemberListComponent implements OnInit{
     }
   }
 }
+
+

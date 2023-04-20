@@ -38,7 +38,7 @@
                     <div class="mb-3" *ngIf="selectedMember">
                       <label for="product-role" class="form-label">บทบาทสมาชิก</label>
                       <select id="product-role" name="Role" class="form-control form-control-lg" [(ngModel)]="selectedMember.Role">
-                        <option value="" disabled>--เลือกบทบาท--</option>
+                        <option value="" disabled>--เลือกบทบาทของสมาชิก--</option>
                         <option *ngFor="let role of Roles" [value]="role">{{role}}</option>
                       </select>
                     </div>

@@ -42,7 +42,7 @@ export const navbarData: INavbarData[] = [
         label: 'Settings',
         items: [
             {
-                routelink: 'settings',
+                routelink: '',
                 label: 'Back to shop'
             }
         ]
