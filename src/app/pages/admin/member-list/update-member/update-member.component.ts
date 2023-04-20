@@ -14,7 +14,7 @@ export class UpdateMemberComponent {
   @Output() showModalChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() memberUpdated: EventEmitter<void> = new EventEmitter<void>();
 
-  Roles: string[] = ['Administrator', 'User'];
+  Roles: string[] = ['User', 'Administrator'];
 
   constructor(private memberService: MemberService) { }
 
@@ -41,3 +41,4 @@ export class UpdateMemberComponent {
     }
   }
 }
+

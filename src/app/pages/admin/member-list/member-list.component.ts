@@ -55,6 +55,7 @@ export class MemberListComponent implements OnInit{
   onEdit(member: Member): void {
     this.showModal = true;
     this.selectedMember = { ...member };
+    console.log(this.selectedMember);
   }
 
   onUpdateMember(): void {
